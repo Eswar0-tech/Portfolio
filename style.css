@@ -1,0 +1,184 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header & Profile */
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 3px solid #007bff;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+h1 { margin-bottom: 10px; color: #222; }
+.intro { font-weight: bold; color: #007bff; margin-bottom: 10px; }
+.summary { max-width: 600px; margin: auto; font-size: 0.95rem; }
+
+/* Resume Button Styling */
+.resume-container {
+    margin-top: 25px;
+}
+
+.btn-resume {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn-resume:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-resume i {
+    margin-right: 8px;
+}
+
+/* Sections */
+section { margin-top: 40px; }
+h2 { border-left: 5px solid #007bff; padding-left: 10px; margin-bottom: 20px; font-size: 1.5rem; }
+
+/* Cards (Education) */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Skills with Blinking Effect */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    animation: blink-blue 1.5s infinite ease-in-out;
+}
+
+@keyframes blink-blue {
+    0%, 100% {
+        opacity: 1;
+        background-color: #007bff;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        background-color: #0056b3;
+        transform: scale(0.98);
+    }
+}
+
+/* Projects Section */
+.project-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.project-item {
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: row; /* Desktop: Image side-by-side with text */
+    overflow: hidden;
+    align-items: center;
+}
+
+.project-item:hover {
+    background: #e9f2ff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Project Image Adjustment */
+.project-img {
+    width: 200px; /* Fixed width for project thumbnails */
+    height: 150px; /* Fixed height for consistency */
+    object-fit: cover; /* Crops image to fill dimensions without distortion */
+    border-right: 1px solid #eee;
+}
+
+.project-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.project-item h3 { color: #007bff; margin-bottom: 10px; font-size: 1.2rem; }
+
+/* Contact Icons */
+.contact-section { text-align: center; margin-bottom: 50px; }
+.social-icons { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
+
+.social-icons a { font-size: 2.5rem; transition: transform 0.2s; }
+.social-icons a:hover { transform: translateY(-5px); }
+
+.fa-linkedin { color: #0077b5; }
+.fa-github { color: #333; }
+.fa-envelope { color: #d44638; }
+
+/* Footer */
+footer { text-align: center; padding: 20px; background: #222; color: #fff; font-size: 0.8rem; }
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+    header { padding: 40px 10px; }
+    h1 { font-size: 1.5rem; }
+    .social-icons { gap: 20px; }
+    
+    .project-item {
+        flex-direction: column; /* Stacks image on top of text on mobile */
+    }
+    
+    .project-img {
+        width: 100%;
+        height: 180px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+}
